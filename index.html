@@ -8,8 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- =================================================================== -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8353237794194853"
-     crossorigin="anonymous"></script>
+    <!-- COPIA Y PEGA TU CÓDIGO DE VERIFICACIÓN DE ADSENSE AQUÍ                 -->
+    <!-- Este código te lo proporciona Google y se verá como una etiqueta <script> -->
+    <!-- Ejemplo: <script async src="..." ...></script>                     -->
     <!-- =================================================================== -->
     
     <style>
@@ -77,10 +78,10 @@
                     </a>
                 </div>
                 <div class="mt-12">
-                     <img id="hero-img" src="4-busq_texto.png"
-                         onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/333333?text=Imagen+no+disponible';"
+                     <!-- ===== CORRECCIÓN DE LA RUTA DE LA IMAGEN ===== -->
+                     <img id="hero-img" src="https://raw.githubusercontent.com/dizutta69/IMGFinder/main/4-busq_texto.png"
                          alt="Captura de pantalla de la aplicación IMGFinder mostrando la búsqueda de imágenes" 
-                         class="rounded-lg shadow-2xl mx-auto border-4 border-white">
+                         class="rounded-lg shadow-2xl mx-auto border-4 border-white max-w-full h-auto">
                 </div>
             </div>
         </div>
@@ -193,8 +194,6 @@
                 hero_title: "Encuentra cualquier imagen en tu PC, <br class=\"hidden md:block\"> al instante.",
                 hero_subtitle: "IMGFinder utiliza el poder de la Inteligencia Artificial de OpenAI CLIP para entender lo que buscas. Simplemente describe una imagen con tus propias palabras y déjanos encontrarla por ti.",
                 hero_button: "Descargar para Windows",
-                hero_img_alt: "Captura de pantalla de la aplicación IMGFinder mostrando la búsqueda de imágenes",
-                hero_img_src: "https://placehold.co/800x450/e0f2fe/1d4ed8?text=Captura+de+IMGFinder",
                 // Features
                 features_title: "Todo lo que necesitas para organizar tus imágenes",
                 features_subtitle: "Una potente herramienta diseñada para ser simple y efectiva.",
@@ -231,8 +230,6 @@
                 hero_title: "Find any image on your PC, <br class=\"hidden md:block\"> instantly.",
                 hero_subtitle: "IMGFinder uses the power of OpenAI's CLIP Artificial Intelligence to understand what you're looking for. Simply describe an image in your own words and let us find it for you.",
                 hero_button: "Download for Windows",
-                hero_img_alt: "Screenshot of the IMGFinder application showing an image search",
-                hero_img_src: "https://placehold.co/800x450/e0f2fe/1d4ed8?text=IMGFinder+Screenshot",
                 // Features
                 features_title: "Everything you need to organize your images",
                 features_subtitle: "A powerful tool designed to be simple and effective.",
@@ -277,24 +274,8 @@
             document.querySelectorAll('[data-key]').forEach(elem => {
                 const key = elem.getAttribute('data-key');
                 const translation = translations[lang][key];
-
-                if (elem.tagName === 'IMG') {
-                    if (key.endsWith('_alt')) {
-                        elem.alt = translation;
-                    } else if(key.endsWith('_src')) {
-                        elem.src = translation;
-                    }
-                } else {
-                    elem.innerHTML = translation;
-                }
+                elem.innerHTML = translation;
             });
-
-            // Actualizar específicamente la imagen del héroe que tiene varias propiedades
-             const heroImg = document.getElementById('hero-img');
-             if (heroImg) {
-                 heroImg.alt = translations[lang]['hero_img_alt'];
-                 heroImg.src = translations[lang]['hero_img_src'];
-             }
         };
 
         document.addEventListener('DOMContentLoaded', () => {
