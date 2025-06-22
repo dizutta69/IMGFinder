@@ -19,8 +19,35 @@
 </head>
 <body class="bg-white text-gray-800">
 
-    <!-- ===== NAVEGACIÓN (Usa la misma que en index.html) ===== -->
-    <header>...</header>
+    <!-- ===== SECCIÓN: NAVEGACIÓN ===== -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold gradient-text">IMGFinder</a>
+            <nav class="hidden md:flex items-center">
+                <a href="index.html#features" data-key="nav_features" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Características</a>
+                <a href="guide.html" data-key="nav_guide" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Guía de Usuario</a>
+                <a href="about.html" data-key="nav_about" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Acerca de</a>
+                <a href="#download" data-key="nav_download" class="bg-blue-600 text-white font-bold py-2 px-4 rounded-full hover:bg-blue-700 transition duration-300 text-sm">Descargar</a>
+                <div class="lang-switcher ml-4 border-l border-gray-200 pl-4 text-sm font-medium">
+                    <button id="lang-es" class="text-gray-500 hover:text-blue-600 px-2">ES</button>
+                    <span class="text-gray-300">|</span>
+                    <button id="lang-en" class="text-gray-500 hover:text-blue-600 px-2">EN</button>
+                </div>
+            </nav>
+            <div class="md:hidden">
+                 <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                 </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="index.html#features" data-key="nav_features" class="block text-gray-600 hover:bg-gray-100 px-6 py-3">Características</a>
+            <a href="guide.html" data-key="nav_guide" class="block text-gray-600 hover:bg-gray-100 px-6 py-3">Guía de Usuario</a>
+            <a href="about.html" data-key="nav_about" class="block text-gray-600 hover:bg-gray-100 px-6 py-3">Acerca de</a>
+            <a href="#download" data-key="nav_download" class="block text-gray-600 hover:bg-gray-100 px-6 py-3">Descargar</a>
+        </div>
+    </header>
 
     <!-- ===== CONTENIDO PRINCIPAL (guide.html) ===== -->
     <main class="container mx-auto px-6 content-section">
@@ -84,7 +111,6 @@
     </main>
     
     <!-- ===== FOOTER (Usa el mismo que en index.html) ===== -->
-    <!-- ===== SECCIÓN: FOOTER (COMÚN PARA TODAS LAS PÁGINAS) ===== -->
     <footer class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
