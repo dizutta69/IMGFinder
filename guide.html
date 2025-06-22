@@ -1,44 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>...</head>
-<body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Usuario - IMGFinder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Pega tu código de verificación de AdSense aquí -->
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .content-section { padding-top: 5rem; padding-bottom: 5rem; }
+        .gradient-text { background: linear-gradient(90deg, #3b82f6, #1d4ed8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .lang-switcher button.active { color: #2563eb; font-weight: 700; }
+        .prose { max-width: 80ch; }
+        .guide-step { margin-bottom: 4rem; }
+        .guide-step img { border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); border: 1px solid #e5e7eb; }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- ===== NAVEGACIÓN (Usa la misma que en index.html) ===== -->
     <header>...</header>
-    <main class="container mx-auto px-6 py-20">
-        <h2 class="text-3xl font-bold mb-6">Guía de Usuario de IMGFinder</h2>
-        <div class="prose lg:prose-xl max-w-none text-gray-700 space-y-8">
-            <div>
-                <h3 class="text-2xl font-semibold border-b pb-2 mb-4">Paso 1: Indexar tus Carpetas</h3>
-                <p>La "indexación" es el proceso en el que IMGFinder analiza tus imágenes para entender su contenido. Esto solo se hace una vez por carpeta y es lo que permite la búsqueda mágica después.</p>
-                <ol class="list-decimal list-inside ml-4 space-y-2">
-                    <li>Abre IMGFinder y ve a la pestaña <strong>"Gestión de Índices"</strong>.</li>
-                    <li>Haz clic en el botón <strong>"Indexar Nueva Carpeta"</strong>.</li>
-                    <li>Selecciona la carpeta principal que contiene tus imágenes. La aplicación te mostrará cuántas imágenes nuevas ha encontrado y un tiempo estimado.</li>
-                    <li>Haz clic en "Sí" para comenzar. Mientras se indexa, puedes ver el progreso en la barra de estado.</li>
-                </ol>
-                <p class="mt-4 p-4 bg-blue-50 border-l-4 border-blue-400"><strong>Consejo:</strong> Puedes añadir múltiples carpetas. La próxima vez que abras la aplicación, comprobará automáticamente si hay imágenes nuevas en esas carpetas y te preguntará si quieres actualizarlas.</p>
+
+    <!-- ===== CONTENIDO PRINCIPAL (guide.html) ===== -->
+    <main class="container mx-auto px-6 content-section">
+        <div class="text-center mb-12">
+            <h2 data-key="guide_main_title" class="text-4xl font-bold">Guía de Usuario</h2>
+            <p data-key="guide_main_subtitle" class="text-lg text-gray-600 mt-2">Aprende a usar todo el poder de IMGFinder paso a paso.</p>
+        </div>
+        
+        <div class="prose lg:prose-xl max-w-none mx-auto text-gray-700 space-y-16">
+            
+            <!-- Step 1 -->
+            <div class="guide-step">
+                <h3 data-key="guide1_title" class="text-2xl font-semibold border-b pb-2 mb-4">Paso 1: Indexar una Carpeta</h3>
+                <p data-key="guide1_desc" class="mb-6">Para empezar, ve a la pestaña "Gestión de Índices" y haz clic en "Indexar Nueva Carpeta". La indexación es el proceso en el que IMGFinder analiza tus imágenes para entender su contenido. Esto solo se hace una vez por carpeta.</p>
+                <img src="https://raw.githubusercontent.com/dizutta69/IMGFinder/main/1-indexar.png" alt="Paso 1: Botón para indexar una nueva carpeta.">
             </div>
 
-            <div>
-                <h3 class="text-2xl font-semibold border-b pb-2 mb-4">Paso 2: Realizar una Búsqueda</h3>
-                <p>Una vez que tus imágenes están indexadas, la búsqueda es muy fácil.</p>
-                <ul class="list-disc list-inside ml-4 space-y-2">
-                    <li><strong>Búsqueda por Texto:</strong> Ve a la pestaña "Búsqueda y Resultados". Escribe una descripción en la barra de búsqueda (ej: "montañas con nieve", "documento con firma", "coche rojo") y haz clic en el botón "Texto".</li>
-                    <li><strong>Búsqueda por Imagen:</strong> Haz clic en el botón "Imagen", selecciona una foto de tu ordenador, y la aplicación encontrará las más parecidas en tu índice.</li>
-                </ul>
+            <!-- Step 2 -->
+            <div class="guide-step">
+                <h3 data-key="guide2_title" class="text-2xl font-semibold border-b pb-2 mb-4">Paso 2: Escoger la Carpeta</h3>
+                <p data-key="guide2_desc" class="mb-6">Se abrirá el explorador de archivos. Selecciona la carpeta principal que contiene las imágenes que deseas buscar. Puedes elegir cualquier carpeta de tu disco duro.</p>
+                <img src="https://raw.githubusercontent.com/dizutta69/IMGFinder/main/2-seleccionar_carpeta.png" alt="Paso 2: Selección de carpeta en el explorador de archivos.">
             </div>
 
-            <div>
-                <h3 class="text-2xl font-semibold border-b pb-2 mb-4">Paso 3: Usar los Filtros</h3>
-                <p>Si tienes demasiados resultados, puedes acotarlos con los filtros.</p>
-                <ul class="list-disc list-inside ml-4 space-y-2">
-                    <li><strong>Filtrar por Carpeta:</strong> Te permite mostrar solo los resultados de una subcarpeta específica dentro de tu índice.</li>
-                    <li><strong>Filtrar por Ubicación:</strong> Si tus fotos tienen coordenadas GPS, puedes filtrarlas por País, Estado o Ciudad. ¡Perfecto para encontrar las fotos de tus vacaciones!</li>
-                </ul>
+            <!-- Step 3 -->
+            <div class="guide-step">
+                <h3 data-key="guide3_title" class="text-2xl font-semibold border-b pb-2 mb-4">Paso 3: Confirmar Indexación</h3>
+                <p data-key="guide3_desc" class="mb-6">La aplicación te informará cuántas imágenes nuevas encontró y un tiempo estimado. Haz clic en 'Sí' para continuar. Podrás ver el progreso en tiempo real.</p>
+                <img src="https://raw.githubusercontent.com/dizutta69/IMGFinder/main/3-advertencia.png" alt="Paso 3: Diálogo de confirmación de indexación.">
             </div>
+
+            <!-- Step 4 -->
+            <div class="guide-step">
+                <h3 data-key="guide4_title" class="text-2xl font-semibold border-b pb-2 mb-4">Paso 4: Buscar por Texto</h3>
+                <p data-key="guide4_desc" class="mb-6">Una vez indexado, ve a 'Búsqueda y Resultados', escribe lo que buscas (ej: 'cielo azul', 'reunión de trabajo', 'logo rojo') y presiona 'Texto'.</p>
+                <img src="https://raw.githubusercontent.com/dizutta69/IMGFinder/main/4-busq_texto.png" alt="Paso 4: Resultados de una búsqueda por texto.">
+            </div>
+
+            <!-- Step 5 -->
+            <div class="guide-step">
+                <h3 data-key="guide5_title" class="text-2xl font-semibold border-b pb-2 mb-4">Paso 5: Filtrar por Carpeta</h3>
+                <p data-key="guide5_desc" class="mb-6">Usa el botón 'Filtrar Carpeta' para ver y seleccionar subcarpetas específicas de tu índice y acotar los resultados.</p>
+                <img src="https://raw.githubusercontent.com/dizutta69/IMGFinder/main/5-filtcarpeta.png" alt="Paso 5: Diálogo para filtrar por carpetas.">
+            </div>
+            
+            <!-- Step 6 -->
+            <div class="guide-step">
+                <h3 data-key="guide6_title" class="text-2xl font-semibold border-b pb-2 mb-4">Paso 6: Filtrar por Ubicación</h3>
+                <p data-key="guide6_desc" class="mb-6">Si tus fotos tienen datos GPS, puedes filtrarlas por país, región o ciudad con el botón 'Filtrar Ubicación'.</p>
+                <img src="https://raw.githubusercontent.com/dizutta69/IMGFinder/main/6-filtubic.png" alt="Paso 6: Diálogo para filtrar por ubicación GPS.">
+            </div>
+
+            <!-- Step 7 -->
+            <div class="guide-step">
+                <h3 data-key="guide7_title" class="text-2xl font-semibold border-b pb-2 mb-4">Paso 7: Gestionar Índices</h3>
+                <p data-key="guide7_desc" class="mb-6">En la pestaña 'Gestión de Índices' puedes eliminar carpetas del índice o limpiar todo para empezar de cero.</p>
+                <img src="https://raw.githubusercontent.com/dizutta69/IMGFinder/main/7-limpiarindice.png" alt="Paso 7: Opciones para gestionar el índice.">
+            </div>
+
         </div>
     </main>
+    
+    <!-- ===== FOOTER (Usa el mismo que en index.html) ===== -->
     <footer>...</footer>
-    <script>...</script>
+
+    <!-- ===== SCRIPT DE TRADUCCIÓN (Añade las nuevas claves) ===== -->
+    <script>
+        //...
+    </script>
 </body>
 </html>
--->
