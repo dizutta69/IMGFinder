@@ -7,52 +7,32 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- =================================================================== -->
-    <!-- COPIA Y PEGA TU CÓDIGO DE VERIFICACIÓN DE ADSENSE AQUÍ                 -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8353237794194853"
-         crossorigin="anonymous"></script>
-    <!-- Ejemplo: <script async src="..." ...></script>                     -->
-    <!-- =================================================================== -->
+    <!-- Pega tu código de verificación de AdSense aquí -->
     
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .hero-bg {
-            background-color: #f8fafc;
-        }
-        .feature-icon {
-            background-color: #e0f2fe;
-            color: #0c4a6e;
-        }
-        .gradient-text {
-            background: linear-gradient(90deg, #3b82f6, #1d4ed8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .pulse-button {
-            animation: pulse 2s infinite;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg { background-color: #f8fafc; }
+        .feature-icon { background-color: #e0f2fe; color: #0c4a6e; }
+        .gradient-text { background: linear-gradient(90deg, #3b82f6, #1d4ed8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .pulse-button { animation: pulse 2s infinite; }
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
             70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
             100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
         }
-        /* Estilos para el selector de idioma activo */
-        .lang-switcher button.active {
-            color: #2563eb;
-            font-weight: 700;
-        }
+        .lang-switcher button.active { color: #2563eb; font-weight: 700; }
     </style>
 </head>
 <body class="bg-white text-gray-800">
 
-    <!-- Header -->
+    <!-- ===== SECCIÓN: NAVEGACIÓN ===== -->
     <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold gradient-text">IMGFinder</h1>
+            <a href="index.html" class="text-2xl font-bold gradient-text">IMGFinder</a>
             <nav class="flex items-center">
-                <a href="#features" data-key="nav_features" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Características</a>
+                <a href="index.html#features" data-key="nav_features" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Características</a>
+                <a href="guide.html" data-key="nav_guide" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Guía de Usuario</a>
+                <a href="about.html" data-key="nav_about" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Acerca de</a>
                 <a href="#download" data-key="nav_download" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Descargar</a>
                 <div class="lang-switcher ml-4 border-l border-gray-200 pl-4 text-sm font-medium">
                     <button id="lang-es" class="text-gray-500 hover:text-blue-600 px-2">ES</button>
@@ -63,7 +43,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- ===== SECCIÓN: CONTENIDO PRINCIPAL (index.html) ===== -->
     <main>
         <div class="hero-bg">
             <div class="container mx-auto px-6 py-24 text-center">
@@ -71,7 +51,7 @@
                     Encuentra cualquier imagen en tu PC, <br class="hidden md:block"> al instante.
                 </h2>
                 <p data-key="hero_subtitle" class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
-                    IMGFinder utiliza el poder de la Inteligencia Artificial de OpenAI CLIP para entender lo que buscas. Simplemente describe una imagen con tus propias palabras y déjanos encontrarla por ti.
+                    IMGFinder utiliza el poder de la Inteligencia Artificial para entender lo que buscas. Simplemente describe una imagen con tus propias palabras y déjanos encontrarla por ti.
                 </p>
                 <div class="mt-8">
                     <a href="#download" data-key="hero_button" class="pulse-button bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 transform hover:scale-105">
@@ -79,15 +59,13 @@
                     </a>
                 </div>
                 <div class="mt-12">
-                     <!-- ===== CORRECCIÓN DE LA RUTA DE LA IMAGEN ===== -->
-                     <img id="hero-img" src="https://raw.githubusercontent.com/dizutta69/IMGFinder/main/4-busq_texto.png"
+                     <img src="https://raw.githubusercontent.com/dizutta69/IMGFinder/main/4-busq_texto.png"
                          alt="Captura de pantalla de la aplicación IMGFinder mostrando la búsqueda de imágenes" 
                          class="rounded-lg shadow-2xl mx-auto border-4 border-white max-w-full h-auto">
                 </div>
             </div>
         </div>
 
-        <!-- Features Section -->
         <section id="features" class="py-20">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
@@ -95,27 +73,15 @@
                     <p data-key="features_subtitle" class="text-gray-600 mt-2">Una potente herramienta diseñada para ser simple y efectiva.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Feature 1 -->
                     <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-lg transition">
-                        <div class="flex items-center justify-center h-12 w-12 rounded-full feature-icon mb-4">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                        </div>
                         <h4 data-key="feature1_title" class="text-xl font-semibold mb-2">Búsqueda Semántica con IA</h4>
                         <p data-key="feature1_desc" class="text-gray-600">No busques por nombre de archivo. Describe lo que ves: "un perro en la playa al atardecer" o "logo azul con un círculo".</p>
                     </div>
-                    <!-- Feature 2 -->
                     <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-lg transition">
-                        <div class="flex items-center justify-center h-12 w-12 rounded-full feature-icon mb-4">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                        </div>
                         <h4 data-key="feature2_title" class="text-xl font-semibold mb-2">Búsqueda por Imagen Similar</h4>
                         <p data-key="feature2_desc" class="text-gray-600">¿Encontraste una imagen que te gusta? Usa la búsqueda por similitud para encontrar todas las imágenes parecidas en tu colección.</p>
                     </div>
-                    <!-- Feature 3 -->
                     <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-lg transition">
-                        <div class="flex items-center justify-center h-12 w-12 rounded-full feature-icon mb-4">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                        </div>
                         <h4 data-key="feature3_title" class="text-xl font-semibold mb-2">Filtro por Ubicación</h4>
                         <p data-key="feature3_desc" class="text-gray-600">Si tus fotos tienen datos GPS, IMGFinder los extrae automáticamente para que puedas filtrar por país, estado o ciudad.</p>
                     </div>
@@ -123,45 +89,15 @@
             </div>
         </section>
 
-        <!-- How it works -->
-        <section class="bg-gray-100 py-20">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h3 data-key="howitworks_title" class="text-3xl font-bold">Fácil de Empezar</h3>
-                    <p data-key="howitworks_subtitle" class="text-gray-600 mt-2">En solo tres pasos tendrás todo tu archivo visual organizado.</p>
-                </div>
-                <div class="flex flex-col md:flex-row justify-center items-center gap-8">
-                    <div class="text-center max-w-xs">
-                        <div class="text-4xl font-bold gradient-text mb-2">1</div>
-                        <h4 data-key="step1_title" class="text-xl font-semibold mb-2">Indexa tus Carpetas</h4>
-                        <p data-key="step1_desc" class="text-gray-600">Selecciona las carpetas principales donde guardas tus imágenes. IMGFinder las analizará una sola vez.</p>
-                    </div>
-                     <div class="text-gray-300 text-2xl hidden md:block">→</div>
-                    <div class="text-center max-w-xs">
-                        <div class="text-4xl font-bold gradient-text mb-2">2</div>
-                        <h4 data-key="step2_title" class="text-xl font-semibold mb-2">Describe lo que Buscas</h4>
-                        <p data-key="step2_desc" class="text-gray-600">Usa el campo de búsqueda para escribir una descripción, un concepto o los colores de la imagen que necesitas.</p>
-                    </div>
-                     <div class="text-gray-300 text-2xl hidden md:block">→</div>
-                    <div class="text-center max-w-xs">
-                        <div class="text-4xl font-bold gradient-text mb-2">3</div>
-                        <h4 data-key="step3_title" class="text-xl font-semibold mb-2">Encuentra y Utiliza</h4>
-                        <p data-key="step3_desc" class="text-gray-600">Obtén resultados relevantes al instante. Abre, copia o localiza tus imágenes con un solo clic.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Download Section -->
-        <section id="download" class="py-20">
+        <section id="download" class="bg-gray-100 py-20">
             <div class="container mx-auto px-6 text-center">
                 <h3 data-key="download_title" class="text-3xl md:text-4xl font-bold">Descarga IMGFinder Hoy</h3>
                 <p data-key="download_subtitle" class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
                     Optimiza tu flujo de trabajo y deja de perder tiempo buscando archivos.
                 </p>
                 <div class="mt-8">
-                    <a href="#" data-key="download_button" class="inline-block bg-blue-600 text-white font-bold py-4 px-10 rounded-full hover:bg-blue-700 transition duration-300 transform hover:scale-105">
-                        Descargar v1.0 para Windows
+                    <a href="https://github.com/dizutta69/IMGFinder/releases" target="_blank" data-key="download_button" class="inline-block bg-blue-600 text-white font-bold py-4 px-10 rounded-full hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                        Ir a Descargas en GitHub
                     </a>
                     <p data-key="download_info" class="text-sm text-gray-500 mt-4">Compatible con Windows 8 y superior. ¡Totalmente gratis!</p>
                 </div>
@@ -169,7 +105,7 @@
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- ===== SECCIÓN: FOOTER (COMÚN PARA TODAS LAS PÁGINAS) ===== -->
     <footer class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
@@ -178,125 +114,63 @@
                     <p data-key="footer_copyright" class="text-gray-400">© 2025 Diego Zutta. Todos los derechos reservados.</p>
                 </div>
                 <div class="flex space-x-6">
-                    <a href="#" data-key="footer_privacy" class="text-gray-400 hover:text-white">Política de Privacidad</a>
-                    <a href="#" data-key="footer_contact" class="text-gray-400 hover:text-white">Contacto</a>
+                    <a href="privacy.html" data-key="footer_privacy" class="text-gray-400 hover:text-white">Política de Privacidad</a>
+                    <a href="about.html" data-key="footer_contact" class="text-gray-400 hover:text-white">Contacto</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- ===== SECCIÓN: SCRIPT DE TRADUCCIÓN (COMÚN PARA TODAS LAS PÁGINAS) ===== -->
     <script>
         const translations = {
             es: {
-                // Navegación
-                nav_features: "Características",
-                nav_download: "Descargar",
-                // Hero
+                nav_features: "Características", nav_guide: "Guía de Usuario", nav_about: "Acerca de", nav_download: "Descargar",
                 hero_title: "Encuentra cualquier imagen en tu PC, <br class=\"hidden md:block\"> al instante.",
-                hero_subtitle: "IMGFinder utiliza el poder de la Inteligencia Artificial de OpenAI CLIP para entender lo que buscas. Simplemente describe una imagen con tus propias palabras y déjanos encontrarla por ti.",
+                hero_subtitle: "IMGFinder utiliza el poder de la Inteligencia Artificial para entender lo que buscas. Simplemente describe una imagen con tus propias palabras y déjanos encontrarla por ti.",
                 hero_button: "Descargar para Windows",
-                // Features
-                features_title: "Todo lo que necesitas para organizar tus imágenes",
-                features_subtitle: "Una potente herramienta diseñada para ser simple y efectiva.",
-                feature1_title: "Búsqueda Semántica con IA",
-                feature1_desc: "No busques por nombre de archivo. Describe lo que ves: \"un perro en la playa al atardecer\" o \"logo azul con un círculo\".",
-                feature2_title: "Búsqueda por Imagen Similar",
-                feature2_desc: "¿Encontraste una imagen que te gusta? Usa la búsqueda por similitud para encontrar todas las imágenes parecidas en tu colección.",
-                feature3_title: "Filtro por Ubicación",
-                feature3_desc: "Si tus fotos tienen datos GPS, IMGFinder los extrae automáticamente para que puedas filtrar por país, estado o ciudad.",
-                // How it works
-                howitworks_title: "Fácil de Empezar",
-                howitworks_subtitle: "En solo tres pasos tendrás todo tu archivo visual organizado.",
-                step1_title: "Indexa tus Carpetas",
-                step1_desc: "Selecciona las carpetas principales donde guardas tus imágenes. IMGFinder las analizará una sola vez.",
-                step2_title: "Describe lo que Buscas",
-                step2_desc: "Usa el campo de búsqueda para escribir una descripción, un concepto o los colores de la imagen que necesitas.",
-                step3_title: "Encuentra y Utiliza",
-                step3_desc: "Obtén resultados relevantes al instante. Abre, copia o localiza tus imágenes con un solo clic.",
-                // Download
-                download_title: "Descarga IMGFinder Hoy",
-                download_subtitle: "Optimiza tu flujo de trabajo y deja de perder tiempo buscando archivos.",
-                download_button: "Descargar v1.0 para Windows",
-                download_info: "Compatible con Windows 8 y superior. ¡Totalmente gratis!",
-                // Footer
-                footer_copyright: "© 2025 Diego Zutta. Todos los derechos reservados.",
-                footer_privacy: "Política de Privacidad",
-                footer_contact: "Contacto",
+                features_title: "Todo lo que necesitas para organizar tus imágenes", features_subtitle: "Una potente herramienta diseñada para ser simple y efectiva.",
+                feature1_title: "Búsqueda Semántica con IA", feature1_desc: "No busques por nombre de archivo. Describe lo que ves: \"un perro en la playa al atardecer\" o \"logo azul con un círculo\".",
+                feature2_title: "Búsqueda por Imagen Similar", feature2_desc: "¿Encontraste una imagen que te gusta? Usa la búsqueda por similitud para encontrar todas las imágenes parecidas en tu colección.",
+                feature3_title: "Filtro por Ubicación", feature3_desc: "Si tus fotos tienen datos GPS, IMGFinder los extrae automáticamente para que puedas filtrar por país, estado o ciudad.",
+                download_title: "Descarga IMGFinder Hoy", download_subtitle: "Optimiza tu flujo de trabajo y deja de perder tiempo buscando archivos.",
+                download_button: "Ir a Descargas en GitHub", download_info: "Compatible con Windows 8 y superior. ¡Totalmente gratis!",
+                footer_copyright: "© 2025 Diego Zutta. Todos los derechos reservados.", footer_privacy: "Política de Privacidad", footer_contact: "Contacto",
             },
             en: {
-                // Navigation
-                nav_features: "Features",
-                nav_download: "Download",
-                // Hero
+                nav_features: "Features", nav_guide: "User Guide", nav_about: "About", nav_download: "Download",
                 hero_title: "Find any image on your PC, <br class=\"hidden md:block\"> instantly.",
-                hero_subtitle: "IMGFinder uses the power of OpenAI's CLIP Artificial Intelligence to understand what you're looking for. Simply describe an image in your own words and let us find it for you.",
+                hero_subtitle: "IMGFinder uses the power of Artificial Intelligence to understand what you're looking for. Simply describe an image in your own words and let us find it for you.",
                 hero_button: "Download for Windows",
-                // Features
-                features_title: "Everything you need to organize your images",
-                features_subtitle: "A powerful tool designed to be simple and effective.",
-                feature1_title: "AI Semantic Search",
-                feature1_desc: "Don't search by filename. Describe what you see: \"a dog on the beach at sunset\" or \"blue logo with a circle\".",
-                feature2_title: "Similar Image Search",
-                feature2_desc: "Found an image you like? Use the similarity search to find all similar images in your collection.",
-                feature3_title: "Filter by Location",
-                feature3_desc: "If your photos have GPS data, IMGFinder automatically extracts it so you can filter by country, state, or city.",
-                // How it works
-                howitworks_title: "Easy to Get Started",
-                howitworks_subtitle: "In just three steps, you'll have your entire visual archive organized.",
-                step1_title: "Index Your Folders",
-                step1_desc: "Select the main folders where you store your images. IMGFinder will analyze them just once.",
-                step2_title: "Describe What You're Looking For",
-                step2_desc: "Use the search field to type a description, a concept, or the colors of the image you need.",
-                step3_title: "Find and Use",
-                step3_desc: "Get relevant results instantly. Open, copy, or locate your images with a single click.",
-                // Download
-                download_title: "Download IMGFinder Today",
-                download_subtitle: "Optimize your workflow and stop wasting time searching for files.",
-                download_button: "Download v1.0 for Windows",
-                download_info: "Compatible with Windows 8 and higher. Completely free!",
-                // Footer
-                footer_copyright: "© 2025 Diego Zutta. All rights reserved.",
-                footer_privacy: "Privacy Policy",
-                footer_contact: "Contact",
+                features_title: "Everything you need to organize your images", features_subtitle: "A powerful tool designed to be simple and effective.",
+                feature1_title: "AI Semantic Search", feature1_desc: "Don't search by filename. Describe what you see: \"a dog on the beach at sunset\" or \"blue logo with a circle\".",
+                feature2_title: "Similar Image Search", feature2_desc: "Found an image you like? Use the similarity search to find all similar images in your collection.",
+                feature3_title: "Filter by Location", feature3_desc: "If your photos have GPS data, IMGFinder automatically extracts it so you can filter by country, state, or city.",
+                download_title: "Download IMGFinder Today", download_subtitle: "Optimize your workflow and stop wasting time searching for files.",
+                download_button: "Go to GitHub Releases", download_info: "Compatible with Windows 8 and higher. Completely free!",
+                footer_copyright: "© 2025 Diego Zutta. All rights reserved.", footer_privacy: "Privacy Policy", footer_contact: "Contact",
             }
-        };
-
-        const setLanguage = (lang) => {
-            document.documentElement.lang = lang;
-            localStorage.setItem('language', lang);
-            
-            // Actualizar botones de idioma
-            document.querySelectorAll('.lang-switcher button').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            document.querySelector(`#lang-${lang}`).classList.add('active');
-
-
-            document.querySelectorAll('[data-key]').forEach(elem => {
-                const key = elem.getAttribute('data-key');
-                const translation = translations[lang][key];
-                elem.innerHTML = translation;
-            });
         };
 
         document.addEventListener('DOMContentLoaded', () => {
-            const langES = document.getElementById('lang-es');
-            const langEN = document.getElementById('lang-en');
+            const setLanguage = (lang) => {
+                document.documentElement.lang = lang;
+                localStorage.setItem('language', lang);
+                document.querySelectorAll('.lang-switcher button').forEach(btn => btn.classList.remove('active'));
+                document.querySelector(`#lang-${lang}`).classList.add('active');
+                document.querySelectorAll('[data-key]').forEach(elem => {
+                    const key = elem.getAttribute('data-key');
+                    if (translations[lang][key]) {
+                        elem.innerHTML = translations[lang][key];
+                    }
+                });
+            };
             
-            langES.addEventListener('click', () => setLanguage('es'));
-            langEN.addEventListener('click', () => setLanguage('en'));
+            document.getElementById('lang-es').addEventListener('click', () => setLanguage('es'));
+            document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
 
-            // Detectar idioma guardado o del navegador
-            const savedLang = localStorage.getItem('language');
-            const browserLang = navigator.language.split('-')[0];
-
-            if (savedLang && ['es', 'en'].includes(savedLang)) {
-                setLanguage(savedLang);
-            } else if (browserLang === 'es') {
-                setLanguage('es');
-            } else {
-                setLanguage('en');
-            }
+            const savedLang = localStorage.getItem('language') || (navigator.language.split('-')[0] === 'es' ? 'es' : 'en');
+            setLanguage(savedLang);
         });
     </script>
 </body>
