@@ -1,39 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>...</head>
-<body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - IMGFinder</title>
+    <!-- ... (Mismo head que index.html) ... -->
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- ===== NAVEGACIÓN (Usa la misma que en index.html) ===== -->
     <header>...</header>
-    <main class="container mx-auto px-6 py-20">
-        <h2 class="text-3xl font-bold mb-6">Política de Privacidad</h2>
-        <div class="prose lg:prose-xl max-w-none text-gray-700 space-y-6">
-            <p><strong>Última actualización:</strong> 14 de junio de 2025</p>
-            <p>Esta política de privacidad describe nuestras políticas y procedimientos sobre la recopilación, uso y divulgación de su información cuando utiliza nuestro software IMGFinder.</p>
 
-            <h3 class="text-2xl font-semibold pt-4">La Privacidad es el Núcleo</h3>
-            <p>La filosofía de IMGFinder es simple: **sus datos son suyos**. Creemos que tiene derecho a la privacidad y a saber exactamente cómo se maneja su información.</p>
+    <!-- ===== CONTENIDO PRINCIPAL (privacy.html) ===== -->
+    <main class="container mx-auto px-6 content-section">
+        <div class="prose lg:prose-xl max-w-none mx-auto text-gray-700 space-y-6">
+            <h2 data-key="privacy_title" class="text-4xl font-bold">Política de Privacidad</h2>
+            <p><strong data-key="privacy_last_updated">Última actualización:</strong> 14 de junio de 2025</p>
+            <p data-key="privacy_intro">Esta política de privacidad describe nuestras políticas y procedimientos sobre la recopilación, uso y divulgación de su información cuando utiliza nuestro software IMGFinder.</p>
 
-            <h3 class="text-2xl font-semibold pt-4">Recopilación y Uso de Datos</h3>
-            <p><strong>IMGFinder es una aplicación 100% local.</strong></p>
+            <h3 data-key="privacy_core_title" class="text-2xl font-semibold pt-4">La Privacidad es el Núcleo</h3>
+            <p data-key="privacy_core_desc">La filosofía de IMGFinder es simple: <strong>sus datos son suyos</strong>. Creemos que tiene derecho a la privacidad y a saber exactamente cómo se maneja su información.</p>
+
+            <h3 data-key="privacy_data_title" class="text-2xl font-semibold pt-4">Recopilación y Uso de Datos</h3>
+            <p data-key="privacy_data_subtitle"><strong>IMGFinder es una aplicación 100% local.</strong></p>
             <ul class="list-disc list-inside ml-4">
-                <li><strong>No recopilamos sus imágenes:</strong> El software analiza sus imágenes en su propio ordenador. Ninguna de sus fotos, miniaturas o fragmentos de imagen se transmiten, suben o comparten con nosotros ni con terceros.</li>
-                <li><strong>Los índices son locales:</strong> La base de datos que la aplicación crea para permitir la búsqueda (los "embeddings") se almacena exclusivamente en una carpeta de datos de la aplicación en su disco duro local.</li>
-                <li><strong>No hay seguimiento de uso:</strong> No recopilamos datos de telemetría, análisis de uso ni información personal sobre cómo utiliza el software.</li>
+                <li data-key="privacy_data1"><strong>No recopilamos sus imágenes:</strong> El software analiza sus imágenes en su propio ordenador. Ninguna de sus fotos, miniaturas o fragmentos de imagen se transmiten, suben o comparten con nosotros ni con terceros.</li>
+                <li data-key="privacy_data2"><strong>Los índices son locales:</strong> La base de datos que la aplicación crea para permitir la búsqueda (los "embeddings") se almacena exclusivamente en una carpeta de datos de la aplicación en su disco duro local.</li>
+                <li data-key="privacy_data3"><strong>No hay seguimiento de uso:</strong> No recopilamos datos de telemetría, análisis de uso ni información personal sobre cómo utiliza el software.</li>
             </ul>
 
-            <h3 class="text-2xl font-semibold pt-4">Publicidad de Terceros</h3>
-            <p>La versión gratuita de IMGFinder puede mostrar anuncios proporcionados por redes publicitarias de terceros (como Google AdSense). Estos anuncios se cargan en un componente web dentro de la aplicación.</p>
+            <h3 data-key="privacy_ads_title" class="text-2xl font-semibold pt-4">Publicidad de Terceros</h3>
+            <p data-key="privacy_ads_desc">La versión gratuita de IMGFinder puede mostrar anuncios proporcionados por redes publicitarias de terceros (como Google AdSense). Estos anuncios se cargan en un componente web dentro de la aplicación.</p>
             <ul class="list-disc list-inside ml-4">
-                <li>Estos proveedores de anuncios pueden utilizar cookies u otros identificadores para mostrar anuncios personalizados basados en sus visitas anteriores a otros sitios web.</li>
-                <li>IMGFinder no comparte ninguna información personal o de sus archivos con estos proveedores de anuncios.</li>
-                <li>Puede optar por no recibir publicidad personalizada visitando la configuración de anuncios de la red publicitaria correspondiente.</li>
+                <li data-key="privacy_ads1">Estos proveedores de anuncios pueden utilizar cookies u otros identificadores para mostrar anuncios personalizados basados en sus visitas anteriores a otros sitios web.</li>
+                <li data-key="privacy_ads2">IMGFinder no comparte ninguna información personal o de sus archivos con estos proveedores de anuncios.</li>
+                <li data-key="privacy_ads3">Puede optar por no recibir publicidad personalizada visitando la configuración de anuncios de la red publicitaria correspondiente.</li>
             </ul>
 
-            <h3 class="text-2xl font-semibold pt-4">Contacto</h3>
-            <p>Si tiene alguna pregunta sobre esta Política de Privacidad, puede contactarnos a través de nuestro <a href="https://github.com/dizutta69/IMGFinder" target="_blank" class="text-blue-600 hover:underline">repositorio de GitHub</a>.</p>
+            <h3 data-key="privacy_contact_title" class="text-2xl font-semibold pt-4">Contacto</h3>
+            <p data-key="privacy_contact_desc">Si tiene alguna pregunta sobre esta Política de Privacidad, puede contactarnos a través de nuestro <a href="https://github.com/dizutta69/IMGFinder" target="_blank" class="text-blue-600 hover:underline">repositorio de GitHub</a>.</p>
         </div>
     </main>
+
+    <!-- ===== FOOTER (Usa el mismo que en index.html) ===== -->
     <footer>...</footer>
-    <script>...</script>
+
+    <!-- ===== SCRIPT DE TRADUCCIÓN (Añade las nuevas claves) ===== -->
+    <script>
+        //...
+    </script>
 </body>
 </html>
--->
