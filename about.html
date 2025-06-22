@@ -1,25 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>...</head>
-<body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de - IMGFinder</title>
+    <!-- ... (Mismo head que index.html) ... -->
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- ===== NAVEGACIÓN (Usa la misma que en index.html) ===== -->
     <header>...</header>
-    <main class="container mx-auto px-6 py-20">
-        <h2 class="text-3xl font-bold mb-4">Acerca de IMGFinder</h2>
-        <div class="prose lg:prose-xl max-w-none text-gray-700">
-            <p>IMGFinder nació de una necesidad simple: encontrar una foto específica entre miles de archivos sin recordar su nombre o fecha. ¿Cuántas veces has sabido exactamente qué imagen buscas, pero no tienes idea de cómo encontrarla en tu disco duro? Este proyecto fue creado para resolver ese problema.</p>
-            <p>Mi nombre es Diego Zutta, el desarrollador detrás de esta herramienta. Como entusiasta de la fotografía y la tecnología, quería combinar el increíble poder de los modelos de inteligencia artificial de OpenAI con una aplicación de escritorio práctica, rápida y, sobre todo, privada.</p>
-            <h3 class="font-semibold mt-8">Nuestra Filosofía</h3>
-            <ul>
-                <li><strong>La Privacidad es Primero:</strong> Todo el procesamiento de tus imágenes se realiza en tu propio ordenador. Ninguna de tus fotos o datos sale de tu PC.</li>
-                <li><strong>Simplicidad:</strong> La tecnología compleja no tiene por qué ser difícil de usar. La interfaz de IMGFinder está diseñada para ser intuitiva y directa.</li>
-                <li><strong>Potencia Accesible:</strong> Poner herramientas de IA al alcance de todos para resolver problemas cotidianos.</li>
+
+    <!-- ===== CONTENIDO PRINCIPAL (about.html) ===== -->
+    <main class="container mx-auto px-6 content-section">
+        <div class="prose lg:prose-xl max-w-none mx-auto text-gray-700">
+            <h2 data-key="about_title" class="text-4xl font-bold mb-4">Acerca de IMGFinder</h2>
+            <p data-key="about_p1">IMGFinder nació de una necesidad simple: encontrar una foto específica entre miles de archivos sin recordar su nombre o fecha. ¿Cuántas veces has sabido exactamente qué imagen buscas, pero no tienes idea de cómo encontrarla en tu disco duro? Este proyecto fue creado para resolver ese problema.</p>
+            <p data-key="about_p2">Mi nombre es Diego Zutta, el desarrollador detrás de esta herramienta. Como entusiasta de la fotografía y la tecnología, quería combinar el increíble poder de los modelos de inteligencia artificial con una aplicación de escritorio práctica, rápida y, sobre todo, privada.</p>
+            
+            <h3 data-key="about_philosophy_title" class="font-semibold text-2xl mt-8">Nuestra Filosofía</h3>
+            <ul class="list-disc list-inside mt-4 space-y-2">
+                <li data-key="about_phil1"><strong>La Privacidad es Primero:</strong> Todo el procesamiento de tus imágenes se realiza en tu propio ordenador. Ninguna de tus fotos o datos sale de tu PC.</li>
+                <li data-key="about_phil2"><strong>Simplicidad:</strong> La tecnología compleja no tiene por qué ser difícil de usar. La interfaz de IMGFinder está diseñada para ser intuitiva y directa.</li>
+                <li data-key="about_phil3"><strong>Potencia Accesible:</strong> Poner herramientas de IA al alcance de todos para resolver problemas cotidianos.</li>
             </ul>
-            <p class="mt-8">Este proyecto es un trabajo en desarrollo. Si tienes alguna sugerencia, encuentras un error o simplemente quieres saludar, no dudes en contactarme a través del repositorio de <a href="https://github.com/dizutta69/IMGFinder" target="_blank" class="text-blue-600 hover:underline">GitHub</a>.</p>
-            <p>¡Gracias por usar IMGFinder!</p>
+            
+            <p data-key="about_contact" class="mt-8">Este proyecto es un trabajo en desarrollo. Si tienes alguna sugerencia, encuentras un error o simplemente quieres saludar, no dudes en contactarme a través del repositorio de <a href="https://github.com/dizutta69/IMGFinder" target="_blank" class="text-blue-600 hover:underline">GitHub</a>.</p>
+            <p data-key="about_thanks" class="mt-4">¡Gracias por usar IMGFinder!</p>
         </div>
     </main>
+    
+    <!-- ===== FOOTER (Usa el mismo que en index.html) ===== -->
     <footer>...</footer>
-    <script>...</script>
+
+    <!-- ===== SCRIPT DE TRADUCCIÓN (Añade las nuevas claves) ===== -->
+    <script>
+        //...
+    </script>
 </body>
 </html>
--->
