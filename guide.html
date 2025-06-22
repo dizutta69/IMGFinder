@@ -27,7 +27,7 @@
                 <a href="index.html#features" data-key="nav_features" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Características</a>
                 <a href="guide.html" data-key="nav_guide" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Guía de Usuario</a>
                 <a href="about.html" data-key="nav_about" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Acerca de</a>
-                <a href="#download" data-key="nav_download" class="bg-blue-600 text-white font-bold py-2 px-4 rounded-full hover:bg-blue-700 transition duration-300 text-sm">Descargar</a>
+                <a href="index.html#download" data-key="nav_download" class="bg-blue-600 text-white font-bold py-2 px-4 rounded-full hover:bg-blue-700 transition duration-300 text-sm">Descargar</a>
                 <div class="lang-switcher ml-4 border-l border-gray-200 pl-4 text-sm font-medium">
                     <button id="lang-es" class="text-gray-500 hover:text-blue-600 px-2">ES</button>
                     <span class="text-gray-300">|</span>
@@ -45,7 +45,7 @@
             <a href="index.html#features" data-key="nav_features" class="block text-gray-600 hover:bg-gray-100 px-6 py-3">Características</a>
             <a href="guide.html" data-key="nav_guide" class="block text-gray-600 hover:bg-gray-100 px-6 py-3">Guía de Usuario</a>
             <a href="about.html" data-key="nav_about" class="block text-gray-600 hover:bg-gray-100 px-6 py-3">Acerca de</a>
-            <a href="#download" data-key="nav_download" class="block text-gray-600 hover:bg-gray-100 px-6 py-3">Descargar</a>
+            <a href="index.html#download" data-key="nav_download" class="block text-gray-600 hover:bg-gray-100 px-6 py-3">Descargar</a>
         </div>
     </header>
 
@@ -83,21 +83,21 @@
             <div class="guide-step">
                 <h3 data-key="guide4_title" class="text-2xl font-semibold border-b pb-2 mb-4">Paso 4: Buscar por Texto</h3>
                 <p data-key="guide4_desc" class="mb-6">Una vez indexado, ve a 'Búsqueda y Resultados', escribe lo que buscas (ej: 'cielo azul', 'reunión de trabajo', 'logo rojo') y presiona 'Texto'.</p>
-                <img src="https://raw.githubusercontent.com/dizutta69/IMGFinder/main/4-busq_texto.png" alt="Paso 4: Resultados de una búsqueda por texto.">
+                <img src="https://raw.githubusercontent.com/dizutta69/IMGFinder/main/4-busq_texto.jpg" alt="Paso 4: Resultados de una búsqueda por texto.">
             </div>
 
             <!-- Step 5 -->
             <div class="guide-step">
                 <h3 data-key="guide5_title" class="text-2xl font-semibold border-b pb-2 mb-4">Paso 5: Filtrar por Carpeta</h3>
                 <p data-key="guide5_desc" class="mb-6">Usa el botón 'Filtrar Carpeta' para ver y seleccionar subcarpetas específicas de tu índice y acotar los resultados.</p>
-                <img src="https://raw.githubusercontent.com/dizutta69/IMGFinder/main/5-filtcarpeta.png" alt="Paso 5: Diálogo para filtrar por carpetas.">
+                <img src="https://raw.githubusercontent.com/dizutta69/IMGFinder/main/5-filtcarpeta.jpg" alt="Paso 5: Diálogo para filtrar por carpetas.">
             </div>
             
             <!-- Step 6 -->
             <div class="guide-step">
                 <h3 data-key="guide6_title" class="text-2xl font-semibold border-b pb-2 mb-4">Paso 6: Filtrar por Ubicación</h3>
                 <p data-key="guide6_desc" class="mb-6">Si tus fotos tienen datos GPS, puedes filtrarlas por país, región o ciudad con el botón 'Filtrar Ubicación'.</p>
-                <img src="https://raw.githubusercontent.com/dizutta69/IMGFinder/main/6-filtubic.png" alt="Paso 6: Diálogo para filtrar por ubicación GPS.">
+                <img src="https://raw.githubusercontent.com/dizutta69/IMGFinder/main/6-filtubic.jpg" alt="Paso 6: Diálogo para filtrar por ubicación GPS.">
             </div>
 
             <!-- Step 7 -->
@@ -126,19 +126,69 @@
         </div>
     </footer>
 
-    <!-- ===== SECCIÓN: SCRIPT DE TRADUCCIÓN (COMÚN PARA TODAS LAS PÁGINAS) ===== -->
+    <!-- ===== SCRIPT DE TRADUCCIÓN (COMÚN PARA TODAS LAS PÁGINAS) ===== -->
     <script>
         const translations = {
             es: {
-                // ... (el resto de las traducciones van aquí)
+                nav_features: "Características", nav_guide: "Guía de Usuario", nav_about: "Acerca de", nav_download: "Descargar",
+                guide_main_title: "Guía de Usuario", guide_main_subtitle: "Aprende a usar todo el poder de IMGFinder paso a paso.",
+                guide1_title: "Paso 1: Indexar una Carpeta", guide1_desc: "Para empezar, ve a la pestaña \"Gestión de Índices\" y haz clic en \"Indexar Nueva Carpeta\". La indexación es el proceso en el que IMGFinder analiza tus imágenes para entender su contenido. Esto solo se hace una vez por carpeta.",
+                guide2_title: "Paso 2: Escoger la Carpeta", guide2_desc: "Se abrirá el explorador de archivos. Selecciona la carpeta principal que contiene las imágenes que deseas buscar. Puedes elegir cualquier carpeta de tu disco duro.",
+                guide3_title: "Paso 3: Confirmar Indexación", guide3_desc: "La aplicación te informará cuántas imágenes nuevas encontró y un tiempo estimado. Haz clic en 'Sí' para continuar. Podrás ver el progreso en tiempo real.",
+                guide4_title: "Paso 4: Buscar por Texto", guide4_desc: "Una vez indexado, ve a 'Búsqueda y Resultados', escribe lo que buscas (ej: 'cielo azul', 'reunión de trabajo', 'logo rojo') y presiona 'Texto'.",
+                guide5_title: "Paso 5: Filtrar por Carpeta", guide5_desc: "Usa el botón 'Filtrar Carpeta' para ver y seleccionar subcarpetas específicas de tu índice y acotar los resultados.",
+                guide6_title: "Paso 6: Filtrar por Ubicación", guide6_desc: "Si tus fotos tienen datos GPS, puedes filtrarlas por país, región o ciudad con el botón 'Filtrar Ubicación'.",
+                guide7_title: "Paso 7: Gestionar Índices", guide7_desc: "En la pestaña 'Gestión de Índices' puedes eliminar carpetas del índice o limpiar todo para empezar de cero.",
+                footer_copyright: "© 2025 Diego Zutta. Todos los derechos reservados.", footer_privacy: "Política de Privacidad", footer_contact: "Contacto",
             },
             en: {
-                // ... (el resto de las traducciones van aquí)
+                nav_features: "Features", nav_guide: "User Guide", nav_about: "About", nav_download: "Download",
+                guide_main_title: "User Guide", guide_main_subtitle: "Learn how to use the full power of IMGFinder step by step.",
+                guide1_title: "Step 1: Index a Folder", guide1_desc: "To get started, go to the \"Index Management\" tab and click \"Index New Folder\". Indexing is the process where IMGFinder analyzes your images to understand their content. This is only done once per folder.",
+                guide2_title: "Step 2: Choose the Folder", guide2_desc: "The file explorer will open. Select the main folder containing the images you want to search. You can choose any folder on your hard drive.",
+                guide3_title: "Step 3: Confirm Indexing", guide3_desc: "The application will inform you how many new images it found and provide an estimated time. Click 'Yes' to continue. You can watch the progress in real-time.",
+                guide4_title: "Step 4: Search by Text", guide4_desc: "Once indexed, go to 'Search & Results', type what you are looking for (e.g., 'blue sky', 'work meeting', 'red logo') and press 'Text'.",
+                guide5_title: "Step 5: Filter by Folder", guide5_desc: "Use the 'Filter Folder' button to view and select specific subfolders from your index to narrow down the results.",
+                guide6_title: "Step 6: Filter by Location", guide6_desc: "If your photos have GPS data, you can filter them by country, region, or city with the 'Filter Location' button.",
+                guide7_title: "Step 7: Manage Indexes", guide7_desc: "In the 'Index Management' tab, you can remove folders from the index or clear everything to start over.",
+                footer_copyright: "© 2025 Diego Zutta. All rights reserved.", footer_privacy: "Privacy Policy", footer_contact: "Contact",
             }
         };
-        // Lógica de traducción y menú móvil...
-    </script>
 
+        document.addEventListener('DOMContentLoaded', () => {
+            const setLanguage = (lang) => {
+                document.documentElement.lang = lang;
+                localStorage.setItem('language', lang);
+                document.querySelectorAll('.lang-switcher button').forEach(btn => btn.classList.remove('active'));
+                const activeBtn = document.querySelector(`#lang-${lang}`);
+                if (activeBtn) activeBtn.classList.add('active');
+                
+                document.querySelectorAll('[data-key]').forEach(elem => {
+                    const key = elem.getAttribute('data-key');
+                    if (translations[lang] && translations[lang][key]) {
+                        elem.innerHTML = translations[lang][key];
+                    }
+                });
+            };
+
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if(mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
+            const langES = document.getElementById('lang-es');
+            const langEN = document.getElementById('lang-en');
+            
+            if(langES) langES.addEventListener('click', () => setLanguage('es'));
+            if(langEN) langEN.addEventListener('click', () => setLanguage('en'));
+
+            const savedLang = localStorage.getItem('language') || (navigator.language.split('-')[0] === 'es' ? 'es' : 'en');
+            setLanguage(savedLang);
+        });
+    </script>
 
 </body>
 </html>
