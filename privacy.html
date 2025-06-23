@@ -3,15 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - IMGFinder</title>
-    <!-- ... (Mismo head que index.html) ... -->
+    <title>Guía de Usuario - IMGFinder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Pega tu código de verificación de AdSense aquí -->
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .content-section { padding-top: 5rem; padding-bottom: 5rem; }
+        .gradient-text { background: linear-gradient(90deg, #3b82f6, #1d4ed8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .lang-switcher button.active { color: #2563eb; font-weight: 700; }
+        .prose { max-width: 80ch; }
+        .guide-step { margin-bottom: 4rem; }
+        .guide-step img { border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); border: 1px solid #e5e7eb; }
+    </style>
 </head>
 <body class="bg-white text-gray-800">
 
-    <!-- ===== NAVEGACIÓN (Usa la misma que en index.html) ===== -->
-    <header>...</header>
+    <!-- ===== SECCIÓN: NAVEGACIÓN ===== -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold gradient-text">IMGFinder</a>
+            <nav class="hidden md:flex items-center">
+                <a href="index.html#features" data-key="nav_features" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Características</a>
+                <a href="guide.html" data-key="nav_guide" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Guía de Usuario</a>
+                <a href="about.html" data-key="nav_about" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Acerca de</a>
+                <a href="index.html#download" data-key="nav_download" class="bg-blue-600 text-white font-bold py-2 px-4 rounded-full hover:bg-blue-700 transition duration-300 text-sm">Descargar</a>
+                <div class="lang-switcher ml-4 border-l border-gray-200 pl-4 text-sm font-medium">
+                    <button id="lang-es" class="text-gray-500 hover:text-blue-600 px-2">ES</button>
+                    <span class="text-gray-300">|</span>
+                    <button id="lang-en" class="text-gray-500 hover:text-blue-600 px-2">EN</button>
+                </div>
+            </nav>
+            <div class="md:hidden">
+                 <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                 </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="index.html#features" data-key="nav_features" class="block text-gray-600 hover:bg-gray-100 px-6 py-3">Características</a>
+            <a href="guide.html" data-key="nav_guide" class="block text-gray-600 hover:bg-gray-100 px-6 py-3">Guía de Usuario</a>
+            <a href="about.html" data-key="nav_about" class="block text-gray-600 hover:bg-gray-100 px-6 py-3">Acerca de</a>
+            <a href="index.html#download" data-key="nav_download" class="block text-gray-600 hover:bg-gray-100 px-6 py-3">Descargar</a>
+        </div>
+    </header>
 
-    <!-- ===== CONTENIDO PRINCIPAL (privacy.html) ===== -->
+    <!-- ===== CONTENIDO PRINCIPAL (guide.html) ===== -->
     <main class="container mx-auto px-6 content-section">
         <div class="prose lg:prose-xl max-w-none mx-auto text-gray-700 space-y-6">
             <h2 data-key="privacy_title" class="text-4xl font-bold">Política de Privacidad</h2>
@@ -42,12 +80,86 @@
         </div>
     </main>
 
+    
     <!-- ===== FOOTER (Usa el mismo que en index.html) ===== -->
-    <footer>...</footer>
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold">IMGFinder</h3>
+                    <p data-key="footer_copyright" class="text-gray-400">© 2025 Diego Zutta. Todos los derechos reservados.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="privacy.html" data-key="footer_privacy" class="text-gray-400 hover:text-white">Política de Privacidad</a>
+                    <a href="about.html" data-key="footer_contact" class="text-gray-400 hover:text-white">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    <!-- ===== SCRIPT DE TRADUCCIÓN (Añade las nuevas claves) ===== -->
+    <!-- ===== SCRIPT DE TRADUCCIÓN (COMÚN PARA TODAS LAS PÁGINAS) ===== -->
     <script>
-        //...
+        const translations = {
+            es: {
+                nav_features: "Características", nav_guide: "Guía de Usuario", nav_about: "Acerca de", nav_download: "Descargar",
+                guide_main_title: "Guía de Usuario", guide_main_subtitle: "Aprende a usar todo el poder de IMGFinder paso a paso.",
+                guide1_title: "Paso 1: Indexar una Carpeta", guide1_desc: "Para empezar, ve a la pestaña \"Gestión de Índices\" y haz clic en \"Indexar Nueva Carpeta\". La indexación es el proceso en el que IMGFinder analiza tus imágenes para entender su contenido. Esto solo se hace una vez por carpeta.",
+                guide2_title: "Paso 2: Escoger la Carpeta", guide2_desc: "Se abrirá el explorador de archivos. Selecciona la carpeta principal que contiene las imágenes que deseas buscar. Puedes elegir cualquier carpeta de tu disco duro.",
+                guide3_title: "Paso 3: Confirmar Indexación", guide3_desc: "La aplicación te informará cuántas imágenes nuevas encontró y un tiempo estimado. Haz clic en 'Sí' para continuar. Podrás ver el progreso en tiempo real.",
+                guide4_title: "Paso 4: Buscar por Texto", guide4_desc: "Una vez indexado, ve a 'Búsqueda y Resultados', escribe lo que buscas (ej: 'cielo azul', 'reunión de trabajo', 'logo rojo') y presiona 'Texto'.",
+                guide5_title: "Paso 5: Filtrar por Carpeta", guide5_desc: "Usa el botón 'Filtrar Carpeta' para ver y seleccionar subcarpetas específicas de tu índice y acotar los resultados.",
+                guide6_title: "Paso 6: Filtrar por Ubicación", guide6_desc: "Si tus fotos tienen datos GPS, puedes filtrarlas por país, región o ciudad con el botón 'Filtrar Ubicación'.",
+                guide7_title: "Paso 7: Gestionar Índices", guide7_desc: "En la pestaña 'Gestión de Índices' puedes eliminar carpetas del índice o limpiar todo para empezar de cero.",
+                footer_copyright: "© 2025 Diego Zutta. Todos los derechos reservados.", footer_privacy: "Política de Privacidad", footer_contact: "Contacto",
+            },
+            en: {
+                nav_features: "Features", nav_guide: "User Guide", nav_about: "About", nav_download: "Download",
+                guide_main_title: "User Guide", guide_main_subtitle: "Learn how to use the full power of IMGFinder step by step.",
+                guide1_title: "Step 1: Index a Folder", guide1_desc: "To get started, go to the \"Index Management\" tab and click \"Index New Folder\". Indexing is the process where IMGFinder analyzes your images to understand their content. This is only done once per folder.",
+                guide2_title: "Step 2: Choose the Folder", guide2_desc: "The file explorer will open. Select the main folder containing the images you want to search. You can choose any folder on your hard drive.",
+                guide3_title: "Step 3: Confirm Indexing", guide3_desc: "The application will inform you how many new images it found and provide an estimated time. Click 'Yes' to continue. You can watch the progress in real-time.",
+                guide4_title: "Step 4: Search by Text", guide4_desc: "Once indexed, go to 'Search & Results', type what you are looking for (e.g., 'blue sky', 'work meeting', 'red logo') and press 'Text'.",
+                guide5_title: "Step 5: Filter by Folder", guide5_desc: "Use the 'Filter Folder' button to view and select specific subfolders from your index to narrow down the results.",
+                guide6_title: "Step 6: Filter by Location", guide6_desc: "If your photos have GPS data, you can filter them by country, region, or city with the 'Filter Location' button.",
+                guide7_title: "Step 7: Manage Indexes", guide7_desc: "In the 'Index Management' tab, you can remove folders from the index or clear everything to start over.",
+                footer_copyright: "© 2025 Diego Zutta. All rights reserved.", footer_privacy: "Privacy Policy", footer_contact: "Contact",
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const setLanguage = (lang) => {
+                document.documentElement.lang = lang;
+                localStorage.setItem('language', lang);
+                document.querySelectorAll('.lang-switcher button').forEach(btn => btn.classList.remove('active'));
+                const activeBtn = document.querySelector(`#lang-${lang}`);
+                if (activeBtn) activeBtn.classList.add('active');
+                
+                document.querySelectorAll('[data-key]').forEach(elem => {
+                    const key = elem.getAttribute('data-key');
+                    if (translations[lang] && translations[lang][key]) {
+                        elem.innerHTML = translations[lang][key];
+                    }
+                });
+            };
+
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if(mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
+            const langES = document.getElementById('lang-es');
+            const langEN = document.getElementById('lang-en');
+            
+            if(langES) langES.addEventListener('click', () => setLanguage('es'));
+            if(langEN) langEN.addEventListener('click', () => setLanguage('en'));
+
+            const savedLang = localStorage.getItem('language') || (navigator.language.split('-')[0] === 'es' ? 'es' : 'en');
+            setLanguage(savedLang);
+        });
     </script>
+
 </body>
 </html>
