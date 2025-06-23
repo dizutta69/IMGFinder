@@ -110,13 +110,68 @@
     <script>
         const translations = {
             es: {
-                // ... (el resto de las traducciones van aquí)
+                nav_features: "Características", nav_guide: "Guía de Usuario", nav_about: "Acerca de", nav_download: "Descargar",
+                hero_title: "Encuentra cualquier imagen en tu PC, <br class=\"hidden md:block\"> al instante.",
+                hero_subtitle: "IMGFinder utiliza el poder de la Inteligencia Artificial para entender lo que buscas. Simplemente describe una imagen con tus propias palabras y déjanos encontrarla por ti.",
+                hero_button: "Descargar para Windows",
+                features_title: "Todo lo que necesitas para organizar tus imágenes", features_subtitle: "Una potente herramienta diseñada para ser simple y efectiva.",
+                feature1_title: "Búsqueda Semántica con IA", feature1_desc: "No busques por nombre de archivo. Describe lo que ves: \"un perro en la playa al atardecer\" o \"logo azul con un círculo\".",
+                feature2_title: "Búsqueda por Imagen Similar", feature2_desc: "¿Encontraste una imagen que te gusta? Usa la búsqueda por similitud para encontrar todas las imágenes parecidas en tu colección.",
+                feature3_title: "Filtro por Ubicación", feature3_desc: "Si tus fotos tienen datos GPS, IMGFinder los extrae automáticamente para que puedas filtrar por país, estado o ciudad.",
+                download_title: "Descarga IMGFinder Hoy", download_subtitle: "Optimiza tu flujo de trabajo y deja de perder tiempo buscando archivos.",
+                download_button: "Ir a Descargas en GitHub", download_info: "Compatible con Windows 8 y superior. ¡Totalmente gratis!",
+                footer_copyright: "© 2025 Diego Zutta. Todos los derechos reservados.", footer_privacy: "Política de Privacidad", footer_contact: "Contacto",
             },
             en: {
-                // ... (el resto de las traducciones van aquí)
+                nav_features: "Features", nav_guide: "User Guide", nav_about: "About", nav_download: "Download",
+                hero_title: "Find any image on your PC, <br class=\"hidden md:block\"> instantly.",
+                hero_subtitle: "IMGFinder uses the power of Artificial Intelligence to understand what you're looking for. Simply describe an image in your own words and let us find it for you.",
+                hero_button: "Download for Windows",
+                features_title: "Everything you need to organize your images", features_subtitle: "A powerful tool designed to be simple and effective.",
+                feature1_title: "AI Semantic Search", feature1_desc: "Don't search by filename. Describe what you see: \"a dog on the beach at sunset\" or \"blue logo with a circle\".",
+                feature2_title: "Similar Image Search", feature2_desc: "Found an image you like? Use the similarity search to find all similar images in your collection.",
+                feature3_title: "Filter by Location", feature3_desc: "If your photos have GPS data, IMGFinder automatically extracts it so you can filter by country, state, or city.",
+                download_title: "Download IMGFinder Today", download_subtitle: "Optimize your workflow and stop wasting time searching for files.",
+                download_button: "Go to GitHub Releases", download_info: "Compatible with Windows 8 and higher. Completely free!",
+                footer_copyright: "© 2025 Diego Zutta. All rights reserved.", footer_privacy: "Privacy Policy", footer_contact: "Contact",
             }
         };
-        // Lógica de traducción y menú móvil...
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const setLanguage = (lang) => {
+                document.documentElement.lang = lang;
+                localStorage.setItem('language', lang);
+                document.querySelectorAll('.lang-switcher button').forEach(btn => btn.classList.remove('active'));
+                const activeBtn = document.querySelector(`#lang-${lang}`);
+                if (activeBtn) activeBtn.classList.add('active');
+                
+                document.querySelectorAll('[data-key]').forEach(elem => {
+                    const key = elem.getAttribute('data-key');
+                    if (translations[lang] && translations[lang][key]) {
+                        elem.innerHTML = translations[lang][key];
+                    }
+                });
+            };
+            
+            // --- CORRECCIÓN: Lógica para el menú móvil ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if(mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
+            const langES = document.getElementById('lang-es');
+            const langEN = document.getElementById('lang-en');
+            
+            if(langES) langES.addEventListener('click', () => setLanguage('es'));
+            if(langEN) langEN.addEventListener('click', () => setLanguage('en'));
+
+            const savedLang = localStorage.getItem('language') || (navigator.language.split('-')[0] === 'es' ? 'es' : 'en');
+            setLanguage(savedLang);
+        });
     </script>
 </body>
 </html>
+
