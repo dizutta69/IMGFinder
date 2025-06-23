@@ -1,21 +1,33 @@
+<!-- ========================================================================================= -->
+<!--                             CONTENIDO PARA index.html (Página Principal)                  -->
+<!-- ========================================================================================= -->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guía de Usuario - IMGFinder</title>
+    <title>IMGFinder - Encuentra tus Imágenes con IA</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8353237794194853"
      crossorigin="anonymous"></script>
+    
     <style>
         body { font-family: 'Inter', sans-serif; }
         .content-section { padding-top: 5rem; padding-bottom: 5rem; }
+        .hero-bg { background-color: #f8fafc; }
+        .feature-icon { background-color: #e0f2fe; color: #0c4a6e; }
         .gradient-text { background: linear-gradient(90deg, #3b82f6, #1d4ed8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .pulse-button { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+        }
         .lang-switcher button.active { color: #2563eb; font-weight: 700; }
         .prose { max-width: 80ch; }
-        .guide-step { margin-bottom: 4rem; }
-        .guide-step img { border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); border: 1px solid #e5e7eb; }
     </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -25,10 +37,10 @@
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-bold gradient-text">IMGFinder</a>
             <nav class="hidden md:flex items-center">
-                <a href="index.html#features" data-key="nav_features" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"></a>
-                <a href="guide.html" data-key="nav_guide" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"></a>
-                <a href="about.html" data-key="nav_about" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"></a>
-                <a href="index.html#download" data-key="nav_download" class="bg-blue-600 text-white font-bold py-2 px-4 rounded-full hover:bg-blue-700 transition duration-300 text-sm"></a>
+                <a href="index.html#features" data-key="nav_features" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Características</a>
+                <a href="guide.html" data-key="nav_guide" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Guía de Usuario</a>
+                <a href="about.html" data-key="nav_about" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Acerca de</a>
+                <a href="#download" data-key="nav_download" class="bg-blue-600 text-white font-bold py-2 px-4 rounded-full hover:bg-blue-700 transition duration-300 text-sm">Descargar</a>
                 <div class="lang-switcher ml-4 border-l border-gray-200 pl-4 text-sm font-medium">
                     <button id="lang-es" class="text-gray-500 hover:text-blue-600 px-2">ES</button>
                     <span class="text-gray-300">|</span>
@@ -43,78 +55,86 @@
         </div>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden">
-            <a href="index.html#features" data-key="nav_features" class="block text-gray-600 hover:bg-gray-100 px-6 py-3"></a>
-            <a href="guide.html" data-key="nav_guide" class="block text-gray-600 hover:bg-gray-100 px-6 py-3"></a>
-            <a href="about.html" data-key="nav_about" class="block text-gray-600 hover:bg-gray-100 px-6 py-3"></a>
-            <a href="index.html#download" data-key="nav_download" class="block text-gray-600 hover:bg-gray-100 px-6 py-3"></a>
+            <a href="index.html#features" data-key="nav_features" class="block text-gray-600 hover:bg-gray-100 px-6 py-3">Características</a>
+            <a href="guide.html" data-key="nav_guide" class="block text-gray-600 hover:bg-gray-100 px-6 py-3">Guía de Usuario</a>
+            <a href="about.html" data-key="nav_about" class="block text-gray-600 hover:bg-gray-100 px-6 py-3">Acerca de</a>
+            <a href="#download" data-key="nav_download" class="block text-gray-600 hover:bg-gray-100 px-6 py-3">Descargar</a>
         </div>
     </header>
 
-    <!-- ===== CONTENIDO PRINCIPAL (guide.html) ===== -->
-    <main class="container mx-auto px-6 content-section">
-        <div class="text-center mb-12">
-            <h2 data-key="guide_main_title" class="text-4xl font-bold"></h2>
-            <p data-key="guide_main_subtitle" class="text-lg text-gray-600 mt-2"></p>
+    <!-- ===== SECCIÓN: CONTENIDO PRINCIPAL (index.html) ===== -->
+    <main>
+        <div class="hero-bg">
+            <div class="container mx-auto px-6 py-24 text-center">
+                <h2 data-key="hero_title" class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+                    Encuentra cualquier imagen en tu PC, <br class="hidden md:block"> al instante.
+                </h2>
+                <p data-key="hero_subtitle" class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+                    IMGFinder utiliza el poder de la Inteligencia Artificial para entender lo que buscas. Simplemente describe una imagen con tus propias palabras y déjanos encontrarla por ti.
+                </p>
+                <div class="mt-8">
+                    <a href="#download" data-key="hero_button" class="pulse-button bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                        Descargar para Windows
+                    </a>
+                </div>
+                <div class="mt-12">
+                     <img src="https://raw.githubusercontent.com/dizutta69/IMGFinder/main/4-busq_texto.png"
+                         alt="Captura de pantalla de la aplicación IMGFinder mostrando la búsqueda de imágenes" 
+                         class="rounded-lg shadow-2xl mx-auto border-4 border-white max-w-full h-auto">
+                </div>
+            </div>
         </div>
-        
-        <div class="prose lg:prose-xl max-w-none mx-auto text-gray-700 space-y-16">
-            
-            <div class="guide-step">
-                <h3 data-key="guide1_title" class="text-2xl font-semibold border-b pb-2 mb-4"></h3>
-                <p data-key="guide1_desc" class="mb-6"></p>
-                <img src="https://raw.githubusercontent.com/dizutta69/IMGFinder/main/1-indexar.png" alt="Paso 1: Botón para indexar una nueva carpeta.">
-            </div>
 
-            <div class="guide-step">
-                <h3 data-key="guide2_title" class="text-2xl font-semibold border-b pb-2 mb-4"></h3>
-                <p data-key="guide2_desc" class="mb-6"></p>
-                <img src="https://raw.githubusercontent.com/dizutta69/IMGFinder/main/2-seleccionar_carpeta.png" alt="Paso 2: Selección de carpeta en el explorador de archivos.">
+        <section id="features" class="content-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 data-key="features_title" class="text-3xl font-bold">Todo lo que necesitas para organizar tus imágenes</h3>
+                    <p data-key="features_subtitle" class="text-gray-600 mt-2">Una potente herramienta diseñada para ser simple y efectiva.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-lg transition">
+                        <h4 data-key="feature1_title" class="text-xl font-semibold mb-2">Búsqueda Semántica con IA</h4>
+                        <p data-key="feature1_desc" class="text-gray-600">No busques por nombre de archivo. Describe lo que ves: "un perro en la playa al atardecer" o "logo azul con un círculo".</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-lg transition">
+                        <h4 data-key="feature2_title" class="text-xl font-semibold mb-2">Búsqueda por Imagen Similar</h4>
+                        <p data-key="feature2_desc" class="text-gray-600">¿Encontraste una imagen que te gusta? Usa la búsqueda por similitud para encontrar todas las imágenes parecidas en tu colección.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-lg transition">
+                        <h4 data-key="feature3_title" class="text-xl font-semibold mb-2">Filtro por Ubicación</h4>
+                        <p data-key="feature3_desc" class="text-gray-600">Si tus fotos tienen datos GPS, IMGFinder los extrae automáticamente para que puedas filtrar por país, estado o ciudad.</p>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="guide-step">
-                <h3 data-key="guide3_title" class="text-2xl font-semibold border-b pb-2 mb-4"></h3>
-                <p data-key="guide3_desc" class="mb-6"></p>
-                <img src="https://raw.githubusercontent.com/dizutta69/IMGFinder/main/3-advertencia.png" alt="Paso 3: Diálogo de confirmación de indexación.">
+        <section id="download" class="bg-gray-100 content-section">
+            <div class="container mx-auto px-6 text-center">
+                <h3 data-key="download_title" class="text-3xl md:text-4xl font-bold">Descarga IMGFinder Hoy</h3>
+                <p data-key="download_subtitle" class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                    Optimiza tu flujo de trabajo y deja de perder tiempo buscando archivos.
+                </p>
+                <div class="mt-8">
+                    <a href="https://github.com/dizutta69/IMGFinder/releases" target="_blank" data-key="download_button" class="inline-block bg-blue-600 text-white font-bold py-4 px-10 rounded-full hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                        Ir a Descargas en GitHub
+                    </a>
+                    <p data-key="download_info" class="text-sm text-gray-500 mt-4">Compatible con Windows 8 y superior. ¡Totalmente gratis!</p>
+                </div>
             </div>
-
-            <div class="guide-step">
-                <h3 data-key="guide4_title" class="text-2xl font-semibold border-b pb-2 mb-4"></h3>
-                <p data-key="guide4_desc" class="mb-6"></p>
-                <img src="https://raw.githubusercontent.com/dizutta69/IMGFinder/main/4-busq_texto.jpg" alt="Paso 4: Resultados de una búsqueda por texto.">
-            </div>
-
-            <div class="guide-step">
-                <h3 data-key="guide5_title" class="text-2xl font-semibold border-b pb-2 mb-4"></h3>
-                <p data-key="guide5_desc" class="mb-6"></p>
-                <img src="https://raw.githubusercontent.com/dizutta69/IMGFinder/main/5-filtcarpeta.jpg" alt="Paso 5: Diálogo para filtrar por carpetas.">
-            </div>
-            
-            <div class="guide-step">
-                <h3 data-key="guide6_title" class="text-2xl font-semibold border-b pb-2 mb-4"></h3>
-                <p data-key="guide6_desc" class="mb-6"></p>
-                <img src="https://raw.githubusercontent.com/dizutta69/IMGFinder/main/6-filtubic.jpg" alt="Paso 6: Diálogo para filtrar por ubicación GPS.">
-            </div>
-
-            <div class="guide-step">
-                <h3 data-key="guide7_title" class="text-2xl font-semibold border-b pb-2 mb-4"></h3>
-                <p data-key="guide7_desc" class="mb-6"></p>
-                <img src="https://raw.githubusercontent.com/dizutta69/IMGFinder/main/7-limpiarindice.png" alt="Paso 7: Opciones para gestionar el índice.">
-            </div>
-
-        </div>
+        </section>
     </main>
-    
-    <!-- ===== FOOTER (Usa el mismo que en index.html) ===== -->
+
+    <!-- ===== SECCIÓN: FOOTER (COMÚN PARA TODAS LAS PÁGINAS) ===== -->
     <footer class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-center md:text-left mb-4 md:mb-0">
                     <h3 class="text-xl font-bold">IMGFinder</h3>
-                    <p data-key="footer_copyright" class="text-gray-400"></p>
+                    <p data-key="footer_copyright" class="text-gray-400">© 2025 Diego Zutta. Todos los derechos reservados.</p>
                 </div>
                 <div class="flex space-x-6">
-                    <a href="privacy.html" data-key="footer_privacy" class="text-gray-400 hover:text-white"></a>
-                    <a href="about.html" data-key="footer_contact" class="text-gray-400 hover:text-white"></a>
+                    <a href="privacy.html" data-key="footer_privacy" class="text-gray-400 hover:text-white">Política de Privacidad</a>
+                    <a href="about.html" data-key="footer_contact" class="text-gray-400 hover:text-white">Contacto</a>
                 </div>
             </div>
         </div>
@@ -124,64 +144,13 @@
     <script>
         const translations = {
             es: {
-                nav_features: "Características", nav_guide: "Guía de Usuario", nav_about: "Acerca de", nav_download: "Descargar",
-                guide_main_title: "Guía de Usuario", guide_main_subtitle: "Aprende a usar todo el poder de IMGFinder paso a paso.",
-                guide1_title: "Paso 1: Indexar una Carpeta", guide1_desc: "Para empezar, ve a la pestaña \"Gestión de Índices\" y haz clic en \"Indexar Nueva Carpeta\". La indexación es el proceso en el que IMGFinder analiza tus imágenes para entender su contenido. Esto solo se hace una vez por carpeta.",
-                guide2_title: "Paso 2: Escoger la Carpeta", guide2_desc: "Se abrirá el explorador de archivos. Selecciona la carpeta principal que contiene las imágenes que deseas buscar. Puedes elegir cualquier carpeta de tu disco duro.",
-                guide3_title: "Paso 3: Confirmar Indexación", guide3_desc: "La aplicación te informará cuántas imágenes nuevas encontró y un tiempo estimado. Haz clic en 'Sí' para continuar. Podrás ver el progreso en tiempo real.",
-                guide4_title: "Paso 4: Buscar por Texto", guide4_desc: "Una vez indexado, ve a 'Búsqueda y Resultados', escribe lo que buscas (ej: 'cielo azul', 'reunión de trabajo', 'logo rojo') y presiona 'Texto'.",
-                guide5_title: "Paso 5: Filtrar por Carpeta", guide5_desc: "Usa el botón 'Filtrar Carpeta' para ver y seleccionar subcarpetas específicas de tu índice y acotar los resultados.",
-                guide6_title: "Paso 6: Filtrar por Ubicación", guide6_desc: "Si tus fotos tienen datos GPS, puedes filtrarlas por país, región o ciudad con el botón 'Filtrar Ubicación'.",
-                guide7_title: "Paso 7: Gestionar Índices", guide7_desc: "En la pestaña 'Gestión de Índices' puedes eliminar carpetas del índice o limpiar todo para empezar de cero.",
-                footer_copyright: "© 2025 Diego Zutta. Todos los derechos reservados.", footer_privacy: "Política de Privacidad", footer_contact: "Contacto",
+                // ... (el resto de las traducciones van aquí)
             },
             en: {
-                nav_features: "Features", nav_guide: "User Guide", nav_about: "About", nav_download: "Download",
-                guide_main_title: "User Guide", guide_main_subtitle: "Learn how to use the full power of IMGFinder step by step.",
-                guide1_title: "Step 1: Index a Folder", guide1_desc: "To get started, go to the \"Index Management\" tab and click \"Index New Folder\". Indexing is the process where IMGFinder analyzes your images to understand their content. This is only done once per folder.",
-                guide2_title: "Step 2: Choose the Folder", guide2_desc: "The file explorer will open. Select the main folder containing the images you want to search. You can choose any folder on your hard drive.",
-                guide3_title: "Step 3: Confirm Indexing", guide3_desc: "The application will inform you how many new images it found and provide an estimated time. Click 'Yes' to continue. You can watch the progress in real-time.",
-                guide4_title: "Step 4: Search by Text", guide4_desc: "Once indexed, go to 'Search & Results', type what you are looking for (e.g., 'blue sky', 'work meeting', 'red logo') and press 'Text'.",
-                guide5_title: "Step 5: Filter by Folder", guide5_desc: "Use the 'Filter Folder' button to view and select specific subfolders from your index to narrow down the results.",
-                guide6_title: "Step 6: Filter by Location", guide6_desc: "If your photos have GPS data, you can filter them by country, region, or city with the 'Filter Location' button.",
-                guide7_title: "Step 7: Manage Indexes", guide7_desc: "In the 'Index Management' tab, you can remove folders from the index or clear everything to start over.",
-                footer_copyright: "© 2025 Diego Zutta. All rights reserved.", footer_privacy: "Privacy Policy", footer_contact: "Contact",
+                // ... (el resto de las traducciones van aquí)
             }
         };
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const setLanguage = (lang) => {
-                document.documentElement.lang = lang;
-                localStorage.setItem('language', lang);
-                document.querySelectorAll('.lang-switcher button').forEach(btn => btn.classList.remove('active'));
-                const activeBtn = document.querySelector(`#lang-${lang}`);
-                if (activeBtn) activeBtn.classList.add('active');
-                
-                document.querySelectorAll('[data-key]').forEach(elem => {
-                    const key = elem.getAttribute('data-key');
-                    if (translations[lang] && translations[lang][key]) {
-                        elem.innerHTML = translations[lang][key];
-                    }
-                });
-            };
-
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            if(mobileMenuButton) {
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-            }
-            
-            const langES = document.getElementById('lang-es');
-            const langEN = document.getElementById('lang-en');
-            
-            if(langES) langES.addEventListener('click', () => setLanguage('es'));
-            if(langEN) langEN.addEventListener('click', () => setLanguage('en'));
-
-            const savedLang = localStorage.getItem('language') || (navigator.language.split('-')[0] === 'es' ? 'es' : 'en');
-            setLanguage(savedLang);
-        });
+        // Lógica de traducción y menú móvil...
     </script>
 </body>
 </html>
